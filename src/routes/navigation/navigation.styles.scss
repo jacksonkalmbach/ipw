@@ -1,0 +1,46 @@
+.navigation-container {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.logo-container {
+  height: 100%;
+  width: 70px;
+  margin-left: 20px;
+} 
+
+.logo {
+  width: 100%
+}
+
+.nav-links-container {
+  width: 50%;
+  height: 100%;
+  width: 30vw;
+  margin-left: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-link {
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.login-container {
+  height: 100%;
+  width: 70px;
+  padding: 25px;
+  justify-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
