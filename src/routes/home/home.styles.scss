@@ -1,0 +1,70 @@
+.home-container {
+  display: flex;
+}
+
+.title-container {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 70px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-family: 'League Gothic', sans-serif;
+  font-size: 150px;
+  line-height: 0.9;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+
+.tagline {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 25px;
+  justify-self: stretch;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+button {
+  margin-right: 25px;
+}
+
+button :last-child {
+  margin-right: 0;
+}
+
+.images-container {
+  margin-top: 0px;
+  margin-left: 180px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px; 
+  transform: rotate(-0.03turn);
+
+}
+
+.home-image {
+  width: 350px;
+  height: 600px;
+
+  object-fit:cover;
+  overflow: hidden;
+
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.home-image:nth-child(2) {
+  margin-top: 200px; 
+}
+
+.home-image:nth-child(3) {
+  margin-top: -160px; 
+}

@@ -7,10 +7,15 @@
   margin-top: 20px;
 }
 
+.logo-nav-container {
+  display: flex;
+  align-items: center;
+}
+
 .logo-container {
   height: 100%;
   width: 70px;
-  margin-left: 20px;
+  margin-left: 50px;
 } 
 
 .logo {
@@ -28,6 +33,7 @@
 }
 
 .nav-link {
+  font-size: 20px;
   padding: 10px 15px;
   cursor: pointer;
   text-decoration: none;
@@ -35,6 +41,8 @@
 }
 
 .login-container {
+  font-size: 20px;
+  color: black;
   height: 100%;
   width: 70px;
   padding: 25px;
