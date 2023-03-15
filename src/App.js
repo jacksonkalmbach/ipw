@@ -7,13 +7,14 @@ import Shop from './routes/shop/shop.component';
 import Authentication from './routes/authentication/authentication.component';
 import Locations from './routes/locations/locations.component';
 
+
 function App() {
   return (
     <Routes>
       <Route path='/' element={<Navigation />}>
         <Route index element={<Home />}/>
         <Route path='/about' element={<About />}/>
-        <Route path='/locations' element={<Locations />}/>
+        <Route path='/locations/*' element={<Locations/>}/>
         <Route path='/shop' element={<Shop />}/>
         <Route path='/login' element={<Authentication />}/>
       </Route>

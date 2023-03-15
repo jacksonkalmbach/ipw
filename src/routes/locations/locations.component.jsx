@@ -1,26 +1,18 @@
-import React from "react";
-import LocationPreview from "../../components/location-preview/location-preview.component";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-import './locations.styles.scss';
+import LocationDetails from '../../components/location-details/location-details.component';
+import LocationsList from '../../components/locations-list/locations-list.component';
+
 
 const Locations = () => {
-
-  const locationsArray = [];
-
-  for(let i = 0; i < 10; i++) {
-    locationsArray.push(<LocationPreview title='Farmers Branch'></LocationPreview>)
-  }
-
+  console.log('Render Locations Component')
   return(
-    <>
-      <div className="locations-title-container">
-        <h1 className="locations-title">LOCATIONS</h1>
-      </div>
-      <div className="locations-container">
-        {locationsArray}
-      </div>
-    </>
+    <Routes>
+      <Route path="/" index element={<LocationsList/>} />
+      <Route path=":location" element={<LocationDetails location='Sample-Location'/>} />
+    </Routes>
   )
-};
+}
 
 export default Locations;
