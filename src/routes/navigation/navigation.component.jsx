@@ -41,7 +41,7 @@ const Navigation = () => {
             </Link>
           </div>
         </div>
-        <Link to="login" className="login-container">
+        <Link to="/login" className="login-container">
           <span>LOGIN</span>
         </Link>
         <div className="hamburger-container" onClick={toggleSideNav}>

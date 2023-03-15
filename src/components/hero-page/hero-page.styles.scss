@@ -32,16 +32,13 @@
 }
 
 .button-container {
+  margin-top: 25px;
   display: flex;
   justify-content: flex-start;
 }
 
-button {
-  margin-right: 25px;
-}
-
-button :last-child {
-  margin-right: 0;
+.button-container:first-child {
+  margin-right: 10px;
 }
 
 .images-container {
@@ -111,14 +108,4 @@ button :last-child {
   .home-image {
     display: none;
   }
-
-  .home-image:first-child {
-    display: block;
-    width: 100vw;
-    height: 400px;
-    margin-right: 0;
-    margin-top: 0;
-  }
-
- 
 }
