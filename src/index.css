@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 10px 30px;
   font-family: 'Noto Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 code {

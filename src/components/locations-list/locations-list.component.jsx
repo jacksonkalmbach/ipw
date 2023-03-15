@@ -13,8 +13,8 @@ const LOCATION_DATA = [
     address: '335 4th Ave\nDallas, TX'
   },
   {
-    title: 'Austin',
-    address: '55 Rogan Road\nAustin, TX'
+    title: 'Allen',
+    address: '55 Murray Road\nAllen, TX'
   }
 ]
 
