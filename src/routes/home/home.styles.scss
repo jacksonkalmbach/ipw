@@ -68,3 +68,56 @@ button :last-child {
 .home-image:nth-child(3) {
   margin-top: -160px; 
 }
+
+
+@media (max-width: 767px) {
+  .title-container {
+    width: 90vw;
+    margin-left: 20px;
+  }
+
+  .title {
+    font-size: 80px;
+    margin-top: 10px;
+  }
+
+  .tagline {
+    font-size: 18px;
+    width: 80vw;
+  }
+
+  .home-container {
+    flex-direction: column;
+  }
+
+  .images-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: none;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  .home-image {
+    display: none;
+  }
+
+  .home-image:first-child {
+    display: block;
+    width: 100vw;
+    height: 400px;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .button-container {
+    display: flex;  }
+
+  button {
+    font-size: 16px;
+    // padding: 10px 20px;
+    margin: 0;
+  }
+}
