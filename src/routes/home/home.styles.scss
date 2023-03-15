@@ -69,6 +69,10 @@ button :last-child {
   margin-top: -160px; 
 }
 
+.home-buttons-container {
+  display: flex; 
+  gap: 10px;
+}
 
 @media (max-width: 767px) {
   .title-container {
@@ -112,12 +116,5 @@ button :last-child {
     margin-top: 0;
   }
 
-  .button-container {
-    display: flex;  }
-
-  button {
-    font-size: 16px;
-    // padding: 10px 20px;
-    margin: 0;
-  }
+ 
 }

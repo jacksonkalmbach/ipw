@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import pickelImg from '../../assets/paddle-balls.jpg';
+import Button from "../../components/button/button.component";
 
 import './home.styles.scss';
 
@@ -11,11 +11,15 @@ const Home = () => {
       <div className="title-container">
         <h1 className="title">Indoor Pickleball World</h1>
         <h3 className="tagline">We have a new arrival in our collection. It's the perfect piece to add to your collection!</h3>
-        <div className="button-container">
-          <Link to='/login'>
-            <button>REGISTER</button>
-          </Link>
-          <button>EXPLORE</button>
+        <div className="home-buttons-container">
+          <Button
+          >Register
+          </Button>
+          <Button
+            buttonType='inverted'
+            >
+              Explore
+            </Button>
         </div>
       </div>
       <div className="images-container">
