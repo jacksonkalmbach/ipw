@@ -10,7 +10,7 @@ const Locations = () => {
   return(
     <Routes>
       <Route path="/" index element={<LocationsList/>} />
-      <Route path=":location" element={<LocationDetails location='Sample-Location'/>} />
+      <Route path=":location" element={<LocationDetails/>} />
     </Routes>
   )
 }
