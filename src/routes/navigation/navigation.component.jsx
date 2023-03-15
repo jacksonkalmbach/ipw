@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 import ipwLogo from '../../assets/ipw-logo.svg';
+import Button from "../../components/button/button.component";
 
 import './navigation.styles.scss';
 
@@ -70,12 +71,16 @@ const Navigation = () => {
             </Link>
           </h3>
           <div className="buttons-container">
-            <Link to="/login">
-            <button>SIGN UP</button>
-            </Link>
-            <Link to="/login">
-              <button>SIGN IN</button>
-            </Link>
+            <Button
+              to='/login'
+              buttonType="sidenavbase"
+            >SIGN UP
+            </Button>
+            <Button
+              to='/login'
+              buttonType="sidenavinverted"
+            >SIGN IN
+            </Button>
           </div>
         </div>
       </div>

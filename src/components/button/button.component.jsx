@@ -1,18 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import './button.styles.scss';
 
 const BUTTON_TYPES = {
-  base: 'button-container',
-  inverted: 'button-container inverted',
+  base: '',
+  inverted: 'inverted',
+  sidenavbase: 'sidenav-base',
+  sidenavinverted: 'sidenav-inverted'
 }
 
-const Button = ({ children, buttonType = 'base', ...otherProps }) => {
-  const buttonClassName = BUTTON_TYPES[buttonType];
+const Button = ({ children, buttonType = 'base', to, ...otherProps }) => {
+  const buttonClassName = `button-container ${BUTTON_TYPES[buttonType]}`;
   return(
-    <div {...otherProps} className={buttonClassName}>
+    <Link to={to} {...otherProps} className={buttonClassName}>
       {children}
-    </div>
+    </Link>
   )
 }
 

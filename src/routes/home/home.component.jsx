@@ -13,10 +13,12 @@ const Home = () => {
         <h3 className="tagline">We have a new arrival in our collection. It's the perfect piece to add to your collection!</h3>
         <div className="home-buttons-container">
           <Button
+            to='/login'
           >Register
           </Button>
           <Button
             buttonType='inverted'
+            to='/locations'
             >
               Explore
             </Button>
