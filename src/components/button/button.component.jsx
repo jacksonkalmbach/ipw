@@ -7,7 +7,8 @@ const BUTTON_TYPES = {
   base: '',
   inverted: 'inverted',
   sidenavbase: 'sidenav-base',
-  sidenavinverted: 'sidenav-inverted'
+  sidenavinverted: 'sidenav-inverted',
+  google: 'google'
 }
 
 const Button = ({ children, buttonType = 'base', to, ...otherProps }) => {
