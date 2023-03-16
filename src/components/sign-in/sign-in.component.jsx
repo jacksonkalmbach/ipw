@@ -2,12 +2,15 @@ import React from "react";
 
 import Button from '../button/button.component'
 
+import { signInWithGooglePopup } from '../../utils/firebase/firebase.utils.js'
+
 import'./sign-in.styles.scss';
 
 const SignIn = () => {
 
-  const handleGoogleSignIn = () => {
-    console.log('google sign in')
+  const handleGoogleSignIn = async () => {
+    const user = await signInWithGooglePopup();
+    console.log(user)
   }
 
   return(

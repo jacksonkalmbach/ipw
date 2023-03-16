@@ -25,7 +25,7 @@ const LocationPreview = ({ location }) => {
         // to={`/locations/${username.replace(/\s+/g, '-')}`}
         to={`/locations/${username}`}
       >Explore {username}
-      </Button>
+      </Button> 
     </div>
   );
 };
