@@ -3,7 +3,7 @@ import {
   signInWithGooglePopup 
 } from '../../utils/firebase/firebase.utils.js'
 
-// import Button from '../button/button.component'
+import Button from "../button/button.component.jsx";
 import GoogleSignInBtn from "../button/google-signin-btn.jsx";
 
 import'./sign-in.styles.scss';
@@ -17,12 +17,13 @@ const SignIn = () => {
   }
 
   return(
-    <>
+    <div className="signin-container">
       <h1>Sign In</h1>
+      <Button>Sign In</Button>
       <GoogleSignInBtn
         onClick={handleGoogleSignIn}
       />
-    </>
+    </div>
   )
 };
 
