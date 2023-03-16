@@ -7,7 +7,7 @@ import './location-details.styles.scss';
 const LocationDetails = () => {
 
   const {location} = useParams();
-  const locationName = location.replace(/-/g, ' '); // Replace all hyphens with spaces
+  const locationName = location.replace(/-/g, ' ');
 
 
   return (
