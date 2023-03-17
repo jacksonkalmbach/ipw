@@ -1,22 +1,26 @@
 .signin-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
   width: 380px;
 }
 
 .signin-title {
-  margin-top: 60;
-  margin-bottom: 0;
+  margin-top: 100px;
+  margin-bottom: 10px;
   font-family: 'League Gothic', sans-serif;
   text-transform: uppercase;
 }
 
 .signin-form {
-  margin-top: 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
+}
+
+.forgot-password:hover {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 767px) {
@@ -37,7 +41,8 @@
   }
 
   .social-media-signin-mobile {
-    margin-top: 0;
+    margin-top: 30px;
+    margin-bottom: 100px;
   }
 
   .social-media-signin-mobile-button-container {
@@ -50,6 +55,10 @@
 
 @media only screen and (min-width: 768px) {
   .social-media-signin-mobile {
+    display: none;
+  }
+
+  .signin-mobile-btn{
     display: none;
   }
 }
