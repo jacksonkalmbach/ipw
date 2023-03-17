@@ -5,7 +5,7 @@ import Button from '../button/button.component.jsx'
 
 const LocationPreview = ({ location }) => {
 
-  const { username, address } = location;
+  const { username, address, id } = location;
   const { street, city, zipcode } = address;
   const fullAddress = street + ', ' + city + ', ' + zipcode;
 
@@ -23,7 +23,7 @@ const LocationPreview = ({ location }) => {
       <Button
         className="location-preview-button"
         // to={`/locations/${username.replace(/\s+/g, '-')}`}
-        to={`/locations/${username}`}
+        to={`/locations/${id}`}
       >Explore {username}
       </Button> 
     </div>

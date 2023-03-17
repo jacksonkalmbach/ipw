@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Button from "../button/button.component";
 
@@ -6,18 +6,28 @@ import './location-details.styles.scss';
 
 const LocationDetails = () => {
 
-  const {location} = useParams();
-  const locationName = location.replace(/-/g, ' ');
+  const [ locationDetails, setLocationDetails ] = useState({});
+  console.log(locationDetails);
 
+  const { location } = useParams();
 
+  useEffect(() => {
+    fetch(`https://jsonplaceholder.typicode.com/users/${location}`)
+      .then(response => response.json())
+      .then(data => setLocationDetails(data))
+  }, [location])
+
+  const { username, email} = locationDetails;
+
+    
   return (
     <>
       <Button
         to='/locations'
         buttonType="inverted"
       >Back to Locations</Button>
-      <h1>{locationName}</h1>
-      <p>Sample data</p>
+      <h1>{username}</h1>
+      <p>{email}</p>
     </>
   )
 };

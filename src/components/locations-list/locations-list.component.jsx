@@ -13,7 +13,7 @@ const LocationsList = ({ locations }) => {
       </div>
       <div className="locations-container">
         {
-          locations.map(location => <LocationPreview key={location.id} location={location}/>)
+          locations.map((location) => <LocationPreview key={location.id} location={location}/>)
         }
       </div>
     </>
@@ -21,3 +21,4 @@ const LocationsList = ({ locations }) => {
 };
 
 export default LocationsList;
+
