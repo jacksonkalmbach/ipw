@@ -1,6 +1,55 @@
 .signin-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   width: 380px;
+}
 
+.signin-title {
+  margin-top: 60;
+  margin-bottom: 0;
+  font-family: 'League Gothic', sans-serif;
+  text-transform: uppercase;
+}
+
+.signin-form {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 767px) {
+  .signin-container {
+    width: 90vw;
+    height: 70vh;
+    margin-top: 20px;
+    border: 1px solid black;
+  }
+  
+  .sign-up-prompt {
+    color: #e9a034;
+    font-weight: bolder;
+  }
+
+  .social-media-signin-web {
+    display: none;
+  }
+
+  .social-media-signin-mobile {
+    margin-top: 0;
+  }
+
+  .social-media-signin-mobile-button-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .social-media-signin-mobile {
+    display: none;
+  }
 }
