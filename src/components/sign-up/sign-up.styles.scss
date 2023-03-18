@@ -1,9 +1,58 @@
+@import '../../styles/variables.scss';
+
 .signup-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+.signup-title {
+  margin-top: 100px;
+  margin-bottom: 10px;
+  font-family: $title-font;
+  font-size: 60px;
+  text-transform: uppercase;
 }
 
 .signup-form {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .signup-container {
+    width: 90vw;
+    height: 60vh;
+    margin-top: 20px;
+  }
+
+  .signup-form {
+    align-items: center;
+    width: 100%;
+  }
+
+  .form-floating.mb-3 {
+    width:100%;
+  }
+  
+  .form-control {
+    width: 100%;
+    border: none;
+    background-color: #f8f7f7;
+  }
+
+  label {
+    width: 100%;
+  }
+
+  .already-have-account {
+    margin-top: 80px;
+  }
+
+  .sign-in-prompt {
+    color: $primary-orange;
+    font-weight: bold;
+  }
 }

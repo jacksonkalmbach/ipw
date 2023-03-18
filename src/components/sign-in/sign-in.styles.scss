@@ -51,6 +51,13 @@ label {
 
   .signin-form {
     margin-bottom: 0;
+    width: 100%;
+  }
+
+  .form-control {
+    width: 100%;
+    border: none;
+    background-color: #f8f7f7;
   }
 
   .forgot-password {
@@ -70,6 +77,10 @@ label {
     width: 100%;
   }
 
+  .form-floating.mb-3 {
+    width: 100%;
+  }
+
   .or-sign-in-with {
     width: fit-content;
     color: #97a1aa;
@@ -82,7 +93,6 @@ label {
     background-color: #97a1aa;
     margin: -15px 15px 0;
   }
-
 
   .sign-up-prompt {
     color: $primary-orange;

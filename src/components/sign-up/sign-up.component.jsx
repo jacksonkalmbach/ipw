@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import {
   signUpWithEmailAndPassword,
 } from '../../utils/firebase/firebase.utils';
+import Button from "../button/button.component";
 
 import'./sign-up.styles.scss';
 
@@ -15,7 +16,6 @@ const defaultFormFields = {
 
 const SignUpForm = () => {
 
-  
   const [ formFields, setFormFields ] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
 
@@ -46,47 +46,61 @@ const SignUpForm = () => {
 
   return(
     <div className="signup-container">
-      <h1>Sign up with email and password</h1>
-      <form 
-        className="signup-form"
-        onSubmit={handleSubmit}>
-        <label>Display Name</label>
-        <input 
-          required
-          type='text'
-          onChange={handleChange}
-          name="displayName"
-          value={displayName}  
-        />
-        <label>Email Address</label>
-        <input 
-          required
-          type='email'
-          onChange={handleChange}
-          name="email"
-          value={email}
-        />
-        <label>Password</label>
-        <input 
-          required
-          type='password'
-          onChange={handleChange}
-          name="password"
-          value={password}
-          />
-        <label>Confirm Password</label>
-        <input
-         required
-         type='password'
-         onChange={handleChange}
-         name="confirmPassword"
-         value={confirmPassword}
-         />
-        <button 
-          type="submit"
-          >Sign Up
-        </button>
+      <h1 className="signup-title">Sign up</h1>
+      <form className="signup-form">
+      <div className="form-floating mb-3">
+          <input 
+            required 
+            type="text"
+            // value={displayName}
+            onChange={handleChange} 
+            className="form-control" 
+            placeholder="ex. John Smith" />
+          <label htmlFor="floatingInput">Display Name</label>
+        </div>
+        <div className="form-floating mb-3">
+          <input 
+            required 
+            type="email" 
+            // value={email} 
+            onChange={handleChange} 
+            className="form-control" 
+            placeholder="name@example.com" />
+          <label htmlFor="floatingInput">Email Address</label>
+        </div>
+        <div className="form-floating mb-3">
+          <input 
+            required 
+            type="password" 
+            // value={password} 
+            onChange={handleChange} 
+            className="form-control" 
+            placeholder="name@example.com" />
+          <label htmlFor="floatingInput">Password</label>
+        </div>
+        <div className="form-floating mb-3">
+          <input 
+            required 
+            type="password" 
+            // value={confirmPassword}
+            onChange={handleChange} 
+            className="form-control" 
+            placeholder="name@example.com" />
+          <label htmlFor="floatingInput">Confirm Password</label>
+        </div>
+        <Button
+          onSubmit={handleSubmit}
+        >Create Account</Button>
       </form>
+      <div className="already-have-account">
+        <p>
+          Already have an account?
+          <span 
+            className="sign-in-prompt"
+            > Sign In
+            </span>
+        </p>
+      </div>
     </div>
   )
 };
