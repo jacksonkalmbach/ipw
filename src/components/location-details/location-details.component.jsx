@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+
 import Button from "../button/button.component";
+import Calendar from '../calendar/calendar.component.jsx'
 
 import './location-details.styles.scss';
 
@@ -28,6 +30,7 @@ const LocationDetails = () => {
       >Back to Locations</Button>
       <h1>{username}</h1>
       <p>{email}</p>
+      <Calendar />
     </>
   )
 };

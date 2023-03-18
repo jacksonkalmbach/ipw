@@ -35,3 +35,13 @@
   font-size: 40px;
   padding-left: 120px;
 }
+
+@media (max-width: 767px) {
+  .under-hero-container {
+    display: none;
+  }
+
+  .under-hero-img {
+    display: none;
+  }
+}

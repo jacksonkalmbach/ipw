@@ -1,0 +1,18 @@
+.time-slot-container {
+  border: transparent;
+  width: 50px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+
+  &.true {
+    background-color: orange;
+  }
+}
+
+.time-slot-container:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
