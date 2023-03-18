@@ -1,10 +1,11 @@
+@import '../../styles/variables.scss';
 
 .button-container {
   max-width: fit-content;
   height: 50px;
   letter-spacing: 0.5px;
   font-size: 15px;
-  background-color: #e9a034;
+  background-color: $primary-orange;
   color: white;
   font-weight: bolder;
   border: none;

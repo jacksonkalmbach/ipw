@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .signin-container {
   display: flex;
   flex-direction: column;
@@ -7,32 +9,83 @@
 
 .signin-title {
   margin-top: 100px;
+  font-size: 60px;
   margin-bottom: 10px;
-  font-family: 'League Gothic', sans-serif;
+  font-family: $title-font;
   text-transform: uppercase;
 }
 
 .signin-form {
   margin-top: 10px;
   margin-bottom: 30px;
+  width: 80%;
+  height: 150px;
   display: flex;
   flex-direction: column;
+}
+
+.form-control {
+  width: 100%;
+}
+
+label {
+  color: #97a1aa;
 }
 
 .forgot-password:hover {
   cursor: pointer;
 }
 
+
+
 @media only screen and (max-width: 767px) {
   .signin-container {
     width: 90vw;
-    height: 70vh;
+    height: 60vh;
     margin-top: 20px;
-    border: 1px solid black;
+  }
+
+  .signin-title {
+    font-size: 50px;
+  }
+
+  .signin-form {
+    margin-bottom: 0;
+  }
+
+  .forgot-password {
+    margin-top: 0;
+    color: #97a1aa;
+    align-self: flex-end;
+    padding-right: 40px;
+    font-size: 14px;
+  }
+
+  .signin-with-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+
+  .or-sign-in-with {
+    width: fit-content;
+    color: #97a1aa;
+    font-size: 15px;
   }
   
+  .little-line {
+    width: 10%;
+    height: 1px;
+    background-color: #97a1aa;
+    margin: -15px 15px 0;
+  }
+
+
   .sign-up-prompt {
-    color: #e9a034;
+    color: $primary-orange;
     font-weight: bolder;
   }
 
@@ -42,11 +95,13 @@
 
   .social-media-signin-mobile {
     margin-top: 30px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
+    width: 100%;
   }
 
   .social-media-signin-mobile-button-container {
     margin-top: 40px;
+    margin-bottom: 0px;
     display: flex;
     justify-content: center;
     gap: 30px;

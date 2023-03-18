@@ -1,12 +1,12 @@
 import React from "react";
+import './form-input.styles.scss';
 
 const FormInput = ({ label, ...otherProps}) => {
   return (
-    <>
-    <input className="input" label={label} {...otherProps}>
-
-    </input>
-    </>
+    <div className="group">
+      <label className="form-input-label">LABEL</label>
+      <input className="form-input" />
+    </div>
   )
 };
 

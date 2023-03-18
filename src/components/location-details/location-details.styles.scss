@@ -1,0 +1,20 @@
+@import '../../styles/variables.scss';
+
+.location-details-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.location-name {
+  font-family: $title-font;
+  text-transform: uppercase;
+  font-size: 55px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .location-details-container {
+    justify-content: center;
+    align-items: center;
+  }
+}

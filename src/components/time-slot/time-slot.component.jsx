@@ -12,7 +12,7 @@ const TimeSlot = ({ time }) => {
 
   return(
     <div className={`time-slot-container ${isSelected}`} onClick={toggleSelected}>
-      {`${time}:00`}
+      {time}
     </div>
   )
 };

@@ -1,11 +1,11 @@
 .time-slot-container {
   border: transparent;
-  width: 50px;
+  width: 100px;
   text-align: center;
   background-color: black;
   color: white;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
 
   &.true {
     background-color: orange;
@@ -13,6 +13,13 @@
 }
 
 .time-slot-container:hover {
-  background-color: lightgray;
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .time-slot-container {
+    width: 80%;
+    padding: 10px;
+    font-size: 14px;
+  }
 }

@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .home-container {
   display: flex;
   flex-direction: column;
@@ -17,7 +19,7 @@
 
 .title {
   text-transform: uppercase;
-  font-family: 'League Gothic', sans-serif;
+  font-family: $title-font;
   font-size: 150px;
   line-height: 0.9;
   font-weight: 500;
@@ -26,7 +28,7 @@
 }
 
 .tagline {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: $body-font;
   font-size: 25px;
   justify-self: stretch;
 }
@@ -94,16 +96,6 @@
   .home-container {
     flex-direction: column;
   }
-
-  // .images-container {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   align-items: center;
-  //   transform: none;
-  //   margin-left: 0;
-  //   margin-top: 30px;
-  // }
 
   .images-container {
     display: none;
