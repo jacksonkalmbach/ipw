@@ -44,6 +44,10 @@ const SignUpForm = () => {
     setFormFields(defaultFormFields);
   }
 
+  const handleSignInPromptClick = () => {
+    console.log('sign in prompt clicked')
+  }
+
   return(
     <div className="signup-container">
       <h1 className="signup-title">Sign up</h1>
@@ -97,6 +101,7 @@ const SignUpForm = () => {
           Already have an account?
           <span 
             className="sign-in-prompt"
+            onClick={handleSignInPromptClick}
             > Sign In
             </span>
         </p>
