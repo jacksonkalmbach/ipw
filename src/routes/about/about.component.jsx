@@ -4,9 +4,11 @@ import './about.styles.scss';
 
 const About = () => {
   return(
-    <>
-      <h2>I am the about page</h2>
-    </>
+    <div className="about-container">
+      <div className="about-title-container">
+        <h2 className="about-title">About</h2>
+      </div>
+    </div>
   )
 };
 

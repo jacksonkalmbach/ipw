@@ -10,8 +10,8 @@ const Authentication = () => {
 
   return(
     <div className="auth-container">
-      {/* <SignInForm /> */}
-      <SignUpForm />
+      <SignInForm />
+      {/* <SignUpForm /> */}
     </div>
   )
 };
