@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Outlet, Link } from "react-router-dom";
+
+import { signInUser, signUpUser } from "../../store/reducers/user/userSlice";
 
 import ipwLogo from '../../assets/ipw-logo.svg';
 import Button from "../../components/button/button.component";
@@ -7,6 +10,9 @@ import Button from "../../components/button/button.component";
 import './navigation.styles.scss';
 
 const Navigation = () => {
+  
+  const dispatch = useDispatch();
+  
   const [sideNavVisible, setSideNavVisible] = useState(false);
 
   const toggleSideNav = () => {
@@ -17,6 +23,14 @@ const Navigation = () => {
     e.stopPropagation();
     setSideNavVisible(false);
   };
+
+  const handleSignUpBtn = () => {
+    dispatch(signUpUser());
+  };
+
+  const handleSignInBtn = () => {
+    dispatch(signInUser());
+  }
 
   return (
     <>
@@ -74,11 +88,13 @@ const Navigation = () => {
             <Button
               to='/login'
               buttonType="sidenavbase"
+              onClick={handleSignUpBtn}
             >SIGN UP
             </Button>
             <Button
               to='/login'
               buttonType="sidenavinverted"
+              onClick={handleSignInBtn}
             >SIGN IN
             </Button>
           </div>

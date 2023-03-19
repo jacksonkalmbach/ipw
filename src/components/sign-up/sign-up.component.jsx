@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 
 import {
   signUpWithEmailAndPassword,
 } from '../../utils/firebase/firebase.utils';
+import { signInUser } from "../../store/reducers/user/userSlice";
+
 import Button from "../button/button.component";
 
 import'./sign-up.styles.scss';
@@ -15,6 +18,8 @@ const defaultFormFields = {
 }
 
 const SignUpForm = () => {
+
+  const dispatch = useDispatch();
 
   const [ formFields, setFormFields ] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
@@ -45,7 +50,7 @@ const SignUpForm = () => {
   }
 
   const handleSignInPromptClick = () => {
-    console.log('sign in prompt clicked')
+    dispatch(signInUser());
   }
 
   return(

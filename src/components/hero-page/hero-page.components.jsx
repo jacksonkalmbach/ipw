@@ -1,12 +1,22 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 
 import pickelImg from '../../assets/paddle-balls.jpg';
 import Button from '../button/button.component.jsx'
 import HomeAbout from "../home-about/home-about.component";
 
+import { signUpUser } from "../../store/reducers/user/userSlice";
+
 import './hero-page.styles.scss';
 
 const HeroPage = () => {
+
+  const dispatch = useDispatch();
+
+  const handleRegisterBtn = () => {
+    dispatch(signUpUser())
+  }
+
   return(
     <div className="home-container">
       <div className="hero-page-container">
@@ -16,6 +26,7 @@ const HeroPage = () => {
         <div className="home-buttons-container">
           <Button
             to='/login'
+            onClick={handleRegisterBtn}
           >Register
           </Button>
           <Button

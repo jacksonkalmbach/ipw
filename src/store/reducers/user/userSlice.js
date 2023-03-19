@@ -3,18 +3,20 @@ import { createSlice } from '@reduxjs/toolkit'
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
-    isSignedIn: false
+    signUp: true
   },
   reducers: {
-    userSignIn: state => {
-      state.value = true
-    },
-    userSignOut: state => {
+    signInUser: state => {
       state.value = false
+    },
+    signUpUser: state => {
+      state.value = true
     }
   }
 });
 
-export const { userSignIn, userSignOut } = userSlice.actions;
+export const { signInUser, signUpUser } = userSlice.actions;
+
+export const selectSignUpStatus = state => state.user.value;
 
 export default userSlice.reducer;

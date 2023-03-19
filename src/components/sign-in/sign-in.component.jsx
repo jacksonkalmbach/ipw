@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { signUpUser } from "../../store/reducers/user/userSlice.js";
+import { useDispatch } from "react-redux";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -18,6 +21,8 @@ const defaultFormFields = {
 
 const SignInForm = () => {
 
+  const dispatch = useDispatch()
+
   const [ formFields, setFormFields ] = useState(defaultFormFields);
   const { email, password } = formFields;
 
@@ -28,7 +33,7 @@ const SignInForm = () => {
   }
 
   const handleSignUpPromptClick = () => {
-    console.log('sign up clicked')
+    dispatch(signUpUser())
   }
 
   const handleForgotPassword = () => {
