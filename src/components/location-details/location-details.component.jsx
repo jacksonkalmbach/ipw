@@ -9,8 +9,6 @@ import './location-details.styles.scss';
 const LocationDetails = () => {
 
   const [ locationDetails, setLocationDetails ] = useState({});
-  console.log(locationDetails);
-
   const { location } = useParams();
 
   useEffect(() => {

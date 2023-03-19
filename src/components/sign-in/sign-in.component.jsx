@@ -13,6 +13,7 @@ import Button from "../button/button.component.jsx";
 import GoogleSignInBtn from "../button/google-signin-btn.jsx";
 
 import'./sign-in.styles.scss';
+import { logInUser } from "../../store/reducers/user/userAuthSlice.js";
 
 const defaultFormFields = {
   email: '',
@@ -27,9 +28,12 @@ const SignInForm = () => {
   const { email, password } = formFields;
 
   const handleGoogleSignIn = async () => {
-    const userObject = await signInWithGooglePopup();
-    const {user: {displayName}} = userObject;
-    console.log(`Hello ${displayName}`)
+    try {
+      await signInWithGooglePopup();
+      dispatch(logInUser())
+    } catch(error) {
+      console.log(`Error in Google sign in, ${error}`)
+    }
   }
 
   const handleSignUpPromptClick = () => {
