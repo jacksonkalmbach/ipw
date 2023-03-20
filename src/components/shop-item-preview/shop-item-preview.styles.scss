@@ -18,6 +18,10 @@
   margin: 15px;
   border-radius: 20px;
   position: relative;
+  
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .shop-item-preview-img {

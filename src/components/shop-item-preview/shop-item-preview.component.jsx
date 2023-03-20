@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Button from '../button/button.component'
 
@@ -19,7 +20,10 @@ const ShopItemPreview = () => {
 
   return(
     <div className="shop-item-preview-container">
-      <div className="image-container">
+      <Link 
+        className="image-container"
+        to={`/shop/item`}
+        >
         <img className='shop-item-preview-img' src={paddle} alt='paddle'/>
         <div className="heart-icon-container">
           <div className="heart-icon-background">
@@ -31,7 +35,7 @@ const ShopItemPreview = () => {
             </span>
           </div>
         </div>
-      </div>
+      </Link>
 
       <div className='item-preview-details'>
         <div className="preview-name-and-price">

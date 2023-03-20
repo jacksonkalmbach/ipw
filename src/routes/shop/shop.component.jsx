@@ -1,23 +1,16 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+import ShopDirectory from "../../components/shop-container/shop-directory.component";
 import ShopItemPreview from "../../components/shop-item-preview/shop-item-preview.component";
 
-import './shop.styles.scss';
 
 const Shop = () => {
-
-  const dummyItems = [];
-
-  for (let i = 0; i < 20; i++) {
-    dummyItems.push(<ShopItemPreview key={i}/>)
-  }
-
   return(
-    <>
-      <h2>Shop Pickleball</h2>
-      <div className="shop-preview-container">
-        {dummyItems}
-      </div>
-    </>
+    <Routes>
+      <Route path="/" index element={<ShopDirectory />} />
+      <Route path=":item" element={<ShopItemPreview/>} />
+    </Routes>
   )
 };
 
