@@ -22,11 +22,10 @@ const ShopItemPreview = ({ itemInfo }) => {
 
   return(
     <div className="shop-item-preview-container">
-      <Link 
-        className="preview-image-container"
-        to={`/shop/item/${id}`}
-        >
-        <img className='shop-item-preview-img' src={imageUrl} alt='paddle'/>
+      <div 
+        className="preview-image-container">
+       
+          <img className='shop-item-preview-img' src={paddle} alt='paddle'/>
         <div className="heart-icon-container">
           <div className="heart-icon-background">
             <span 
@@ -37,11 +36,13 @@ const ShopItemPreview = ({ itemInfo }) => {
             </span>
           </div>
         </div>
-      </Link>
-
+      </div>
       <div className='item-preview-details'>
         <div className="preview-name-and-price">
-          <h2 className="item-preview-name">{name}</h2>
+          <Link 
+            className="item-preview-name"
+            to={`/shop/item/${id}`}
+            >{name}</Link>
           <h3 className="item-preview-price">${price}</h3>
         </div>
         <div className="item-specs-preview-container">

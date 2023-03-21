@@ -73,7 +73,9 @@ const Navigation = () => {
                 LOGOUT
               </span> 
               : 
-              <span>
+              <span
+                onClick={handleSignInBtn}
+              >
                 LOGIN
               </span> 
           }
