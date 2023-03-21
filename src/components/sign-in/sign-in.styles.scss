@@ -56,6 +56,10 @@
 .sign-up-prompt {
   color: $primary-orange;
   font-weight: bolder;
+  
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .form-control {

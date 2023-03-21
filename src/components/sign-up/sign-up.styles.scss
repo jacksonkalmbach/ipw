@@ -3,8 +3,10 @@
 .signup-container {
   display: flex;
   flex-direction: column;
+  width: 35vw;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  margin-right: 15%;
 }
 
 .signup-title {
@@ -19,18 +21,40 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.sign-in-prompt {
+  color: $primary-orange;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.form-floating.mb-3 {
+  width:100%;
 }
 
 @media only screen and (max-width: 767px) {
   .signup-container {
     width: 90vw;
     height: 60vh;
-    margin-top: 20px;
+    margin-top: 80px;
+    margin-right: 0;
   }
 
   .signup-form {
     align-items: center;
     width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .signup-title {
+    font-size: 50px;
   }
 
   .form-floating.mb-3 {
@@ -51,8 +75,5 @@
     margin-top: 80px;
   }
 
-  .sign-in-prompt {
-    color: $primary-orange;
-    font-weight: bold;
-  }
+ 
 }

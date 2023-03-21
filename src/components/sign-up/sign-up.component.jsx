@@ -61,7 +61,6 @@ const SignUpForm = () => {
           <input 
             required 
             type="text"
-            // value={displayName}
             onChange={handleChange} 
             className="form-control" 
             placeholder="ex. John Smith" />
