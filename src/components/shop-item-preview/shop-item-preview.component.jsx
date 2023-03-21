@@ -6,7 +6,9 @@ import Button from '../button/button.component'
 import paddle from '../../assets/paddle-img.png'
 import './shop-item-preview.styles.scss';
 
-const ShopItemPreview = () => {
+
+const ShopItemPreview = ({ itemInfo }) => {
+  const { id, name, price, imageUrl } = itemInfo;
 
   const [ isFavorite, setIsFavorite ] = useState(false);
 
@@ -21,10 +23,10 @@ const ShopItemPreview = () => {
   return(
     <div className="shop-item-preview-container">
       <Link 
-        className="image-container"
-        to={`/shop/item`}
+        className="preview-image-container"
+        to={`/shop/item/${id}`}
         >
-        <img className='shop-item-preview-img' src={paddle} alt='paddle'/>
+        <img className='shop-item-preview-img' src={imageUrl} alt='paddle'/>
         <div className="heart-icon-container">
           <div className="heart-icon-background">
             <span 
@@ -39,8 +41,8 @@ const ShopItemPreview = () => {
 
       <div className='item-preview-details'>
         <div className="preview-name-and-price">
-          <h2 className="item-preview-name">Name</h2>
-          <h3 className="item-preview-price">$20</h3>
+          <h2 className="item-preview-name">{name}</h2>
+          <h3 className="item-preview-price">${price}</h3>
         </div>
         <div className="item-specs-preview-container">
           <p className="item-specs-preview">These are the item details</p>

@@ -3,12 +3,16 @@ import ShopItemPreview from "../shop-item-preview/shop-item-preview.component";
 
 import './shop-directory.styles.scss';
 
+import SHOP_DATA from '../../shop-data.json'
+
 const ShopDirectory = () => {
+
+  console.log(SHOP_DATA);
 
   const dummyItems = [];
 
-  for (let i = 0; i < 20; i++) {
-    dummyItems.push(<ShopItemPreview key={i}/>)
+  for (let i = 0; i < SHOP_DATA.length; i++) {
+    dummyItems.push(<ShopItemPreview key={i} itemInfo={SHOP_DATA[i]}/>)
   }
 
   return(
