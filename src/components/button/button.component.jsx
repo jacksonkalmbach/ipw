@@ -8,6 +8,7 @@ const BUTTON_TYPES = {
   inverted: 'inverted',
   sidenavbase: 'sidenav-base',
   sidenavinverted: 'sidenav-inverted',
+  signin: 'sign-in',
   google: 'google'
 }
 

@@ -46,7 +46,7 @@ const SignInForm = () => {
 
   return(
     <div className="signin-container">
-      <h1 className="signin-title">Sign In</h1>
+      <h1 className="signin-title">Welcome Back</h1>
       <form className="signin-form">
         <div className="form-floating mb-3">
           <input 
@@ -70,7 +70,13 @@ const SignInForm = () => {
         onClick={handleForgotPassword}
       >Forgot Password?</span>
       <div className="social-media-signin-web">
-        <Button>Sign In</Button>
+        <Button
+        >Sign In</Button>
+        <div className="signin-with-container">
+          <div className="little-line" />
+          <p className="or-sign-in-with">OR SIGN IN WITH</p>
+          <div className="little-line" />
+        </div>
         <GoogleSignInBtn
           onClick={handleGoogleSignIn}
         />
