@@ -1,41 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-
+import { FaStar, FaRegStar } from 'react-icons/fa';
 import Button from '../button/button.component'
-
 import paddle from '../../assets/paddle-img.png'
 import './shop-item-preview.styles.scss';
 
-
 const ShopItemPreview = ({ itemInfo }) => {
-  const { id, name, price, imageUrl } = itemInfo;
+  const { id, name, price, rating, numRatings } = itemInfo;
 
-  const [ isFavorite, setIsFavorite ] = useState(false);
+  const getFilledStarCount = () => {
+    return Math.round(rating);
+  };
 
-  const handleFavorite = () => {
-    setIsFavorite(!isFavorite);
-  }
-
-  const handleAddToCart = () => {
-    console.log('add to cart')
-  }
+  const getEmptyStarCount = () => {
+    return 5 - getFilledStarCount();
+  };
 
   return(
     <div className="shop-item-preview-container">
       <div 
         className="preview-image-container">
-       
-          <img className='shop-item-preview-img' src={paddle} alt='paddle'/>
-        <div className="heart-icon-container">
-          <div className="heart-icon-background">
-            <span 
-              className={`material-symbols-outlined ${isFavorite ? 'favorited' : ''}`}
-              onClick={handleFavorite}  
-            >
-              favorite
-            </span>
-          </div>
-        </div>
+        <img className='shop-item-preview-img' src={paddle} alt='paddle'/>
       </div>
       <div className='item-preview-details'>
         <div className="preview-name-and-price">
@@ -47,12 +32,21 @@ const ShopItemPreview = ({ itemInfo }) => {
         </div>
         <div className="item-specs-preview-container">
           <p className="item-specs-preview">These are the item details</p>
+          <div className="rating shop-item-rating">
+            {Array(getFilledStarCount()).fill(
+              <FaStar className="filled" />
+            )}
+            {Array(getEmptyStarCount()).fill(
+              <FaRegStar />
+            )}
+          <span>({numRatings})</span>
+          </div>
         </div>
       </div>
       <Button
         className='add-to-cart-btn'
         buttonType="inverted"
-        onClick={handleAddToCart}
+        onClick={() => console.log('add to cart')}
       >Add to Cart
       </Button>
     </div>
